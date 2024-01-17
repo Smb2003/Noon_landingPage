@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+
+}
+.Slider{
+  height: 400px;
+  background-color: aqua;
+  margin-bottom: 10px;
+}
+
+.Button{
+  min-width: 130px;
+  min-height: 45px;
+  color: orangered;
+  border:1px;
+  border-color:orangered;
+  font-weight: 600;
+  opacity: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-top: 25px;
+  background: linear-gradient(to right, orangered 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+.Button:hover{
+  color: white;
+  border-color: black;
+  background-position: left bottom;
+}
+
+.container{
+  min-height: 90vh;
+  padding: 20px;
+  /* background-color:aqua ; */
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  /* text-align: center; */
+}
+
+.container>img{
+  min-width: 350px;
+  height: 400px;
+  border-radius:10px;
+  
+}
+.innerContainer{
+  margin: 30px;
+  text-align:left ;
+}
+.Footer{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightslategrey;
+  min-height:300px ;
+}
+.Footer_Items{
+  list-style-type: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width:420px) {
+  .Slider{
+    height: 200px;
+  }
+  .container{
+    flex-direction: column;
+    padding: 10px;
+  }
+  .container>img{
+     min-width: 200px;
+  }
+  .Footer{
+    flex-direction: column;
+    padding-top: 40px;
+  
+  }
+  .Footer_Items{
+    margin-top: 30px;
+    text-align: center;
+  }
+}
